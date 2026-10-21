@@ -1,0 +1,247 @@
+/* Paleta de Cores — Tema Unhas 💅 */
+:root {
+    --cor-principal: #C2185B;
+    --cor-destaque: #FF4081;
+    --cor-clara: #FCE4EC;
+    --cor-creme: #FFF8FA;
+    --cor-dourado: #F8C300;
+    --cor-texto: #4A2040;
+    --cor-branca: #FFFFFF;
+    --cor-sombra: rgba(194, 24, 91, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--cor-clara) 0%, var(--cor-creme) 100%);
+    min-height: 100vh;
+    line-height: 1.7;
+    color: var(--cor-texto);
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(90deg, var(--cor-principal), var(--cor-destaque));
+    color: var(--cor-branca);
+    padding: 1.8rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(194, 24, 91, 0.25);
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Cartões */
+.cartao {
+    background: var(--cor-branca);
+    border-radius: 24px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px var(--cor-sombra);
+    position: relative;
+    overflow: hidden;
+}
+
+.cartao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--cor-principal), var(--cor-dourado), var(--cor-destaque));
+}
+
+.cartao h2 {
+    color: var(--cor-principal);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+/* Cartão Principal */
+.cartao.principal {
+    text-align: center;
+}
+
+.emoji {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.cartao.principal h1 {
+    color: var(--cor-principal);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cartao.principal p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Lista de Serviços */
+.lista-servicos li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--cor-clara);
+}
+
+.lista-servicos li:last-child {
+    border-bottom: none;
+}
+
+.lista-servicos strong {
+    color: var(--cor-principal);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.lista-servicos p {
+    color: #666;
+    padding-left: 0.5rem;
+}
+
+/* Preços */
+.precos {
+    background: linear-gradient(to bottom, #FFF, var(--cor-clara));
+}
+
+.precos ul {
+    list-style: none;
+}
+
+.precos li {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(194, 24, 91, 0.1);
+    font-size: 1.05rem;
+}
+
+.precos li:last-child {
+    border-bottom: none;
+}
+
+/* Cuidados */
+.cuidados ul {
+    list-style: none;
+}
+
+.cuidados li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--cor-clara);
+}
+
+.cuidados li:last-child {
+    border-bottom: none;
+}
+
+/* Galeria de Inspirações */
+.grade-inspiracoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.item-inspiracao {
+    background: var(--cor-clara);
+    padding: 1.3rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.item-inspiracao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(194, 24, 91, 0.15);
+}
+
+.item-inspiracao h3 {
+    color: var(--cor-principal);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.item-inspiracao p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Botão de Agendamento */
+.agendar {
+    text-align: center;
+}
+
+.agendar p {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+.botao {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-destaque));
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.15rem;
+    padding: 1.1rem 3rem;
+    border-radius: 50px;
+    box-shadow: 0 6px 18px rgba(194, 24, 91, 0.3);
+    transition: all 0.35s ease;
+    border: 2px solid transparent;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(194, 24, 91, 0.4);
+    border-color: var(--cor-dourado);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    text-align: center;
+    padding: 1.8rem;
+    font-size: 0.95rem;
+    margin-top: 2rem;
+}
+
+footer .dourado {
+    color: var(--cor-dourado);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .cartao {
+        padding: 2rem 1.5rem;
+    }
+
+    header {
+        font-size: 1.2rem;
+        padding: 1.4rem;
+    }
+
+    .grade-inspiracoes {
+        grid-template-columns: 1fr;
+    }
+}
